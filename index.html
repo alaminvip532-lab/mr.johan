@@ -9,53 +9,62 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Poppins;background:#050507;color:#eee}
-section{padding:100px 12%}
+section{padding:80px 8%}
 h1,h2{color:#d4af37}
-h2{text-align:center;margin-bottom:50px;font-size:2.2rem}
+h2{text-align:center;margin-bottom:40px}
 
-nav{position:fixed;width:100%;top:0;left:0;padding:20px 10%;display:flex;justify-content:space-between;background:rgba(0,0,0,0.7);backdrop-filter:blur(10px);z-index:1000}
-nav a{margin-left:25px;color:#ccc;font-size:14px}
+nav{position:fixed;width:100%;top:0;left:0;padding:15px 8%;display:flex;justify-content:space-between;background:rgba(0,0,0,0.7);backdrop-filter:blur(10px);z-index:1000}
+nav a{margin-left:15px;color:#ccc;font-size:14px}
 
-.hero{height:100vh;display:flex;align-items:center;justify-content:space-between}
-.hero-text{max-width:550px}
-.hero h1{font-size:3.5rem}
-.hero p{margin:15px 0;color:#aaa;line-height:1.6}
-.btn{display:inline-block;margin-top:15px;padding:12px 28px;border:1px solid #d4af37;border-radius:30px}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.hero-text{max-width:500px}
+.hero h1{font-size:3rem}
+.hero p{margin:10px 0;color:#aaa}
+.btn{display:inline-block;margin-top:10px;padding:10px 22px;border:1px solid #d4af37;border-radius:25px}
 .btn:hover{background:#d4af37;color:#000}
-.hero img{width:380px;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.6)}
+.hero img{width:350px;border-radius:15px}
 
-.about{display:flex;align-items:center;gap:50px}
-.about img{width:300px;border-radius:15px}
-.about p{line-height:1.8;color:#bbb}
+.about{display:flex;align-items:center;gap:40px}
+.about img{width:260px;border-radius:12px}
+.about p{color:#bbb;line-height:1.7}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
-.card{padding:25px;border:1px solid #1c1c1c;border-radius:12px;background:#0f0f12;transition:.3s}
-.card:hover{border-color:#d4af37;transform:translateY(-8px)}
-.card img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:15px}
-.card h3{color:#d4af37;margin-bottom:10px}
-.card p{font-size:14px;color:#aaa;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{padding:20px;border:1px solid #1c1c1c;border-radius:10px;background:#111}
+.card img{width:100%;height:140px;object-fit:cover;border-radius:8px;margin-bottom:10px}
 
-.exp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
-.exp-card{background:#0f0f12;border:1px solid #1c1c1c;border-radius:12px;overflow:hidden;transition:.3s}
-.exp-card:hover{border-color:#d4af37;transform:translateY(-8px)}
-.exp-card img{width:100%;height:180px;object-fit:cover}
-.exp-content{padding:20px}
-.exp-content span{color:#d4af37;font-size:13px}
-.exp-content h3{margin:10px 0;color:#fff}
-.exp-content p{color:#aaa;font-size:14px;line-height:1.6}
+.exp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.exp-card{background:#111;border-radius:10px;overflow:hidden;border:1px solid #1c1c1c}
+.exp-card img{width:100%;height:160px;object-fit:cover}
+.exp-content{padding:15px}
+.exp-content span{color:#d4af37;font-size:12px}
 
-.project-card{display:flex;gap:30px;align-items:center;margin-bottom:50px}
-.project-card img{width:260px;border-radius:12px}
-.project-card h3{color:#d4af37;margin-bottom:10px}
-.project-card p{color:#bbb;line-height:1.6}
+.project-card{display:flex;gap:20px;align-items:center;margin-bottom:30px}
+.project-card img{width:200px;border-radius:10px}
 
-.quote{text-align:center;font-size:1.8rem;color:#ccc;font-style:italic;max-width:700px;margin:auto}
+.quote{text-align:center;font-size:1.4rem}
 
-form{max-width:550px;margin:auto;display:flex;flex-direction:column;gap:15px}
-input,textarea{padding:14px;background:#111;border:1px solid #222;color:#fff;border-radius:6px}
-button{padding:14px;background:#d4af37;border:none;font-weight:bold;border-radius:6px}
+form{max-width:500px;margin:auto;display:flex;flex-direction:column;gap:10px}
+input,textarea{padding:12px;background:#111;border:1px solid #222;color:#fff}
+button{padding:12px;background:#d4af37;border:none}
 
-footer{text-align:center;padding:25px;background:#000;color:#777}
+footer{text-align:center;padding:20px;background:#000}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.hero{flex-direction:column;text-align:center}
+.hero img{width:80%}
+.about{flex-direction:column;text-align:center}
+.about img{width:200px}
+.project-card{flex-direction:column;text-align:center}
+}
+
+@media(max-width:600px){
+.hero h1{font-size:2.2rem}
+section{padding:60px 6%}
+nav{flex-direction:column;gap:10px}
+nav div:last-child{display:flex;justify-content:center}
+}
+
 </style>
 </head>
 
@@ -74,8 +83,8 @@ footer{text-align:center;padding:25px;background:#000;color:#777}
 <div class="hero-text">
 <h1>Mr. Johan</h1>
 <p>Forex Expert & Entrepreneur</p>
-<p>Building AI-powered financial systems and global business innovation.</p>
-<a href="#about" class="btn">Explore More</a>
+<p>Building AI-powered financial systems.</p>
+<a href="#about" class="btn">Explore</a>
 </div>
 <img src="https://images.unsplash.com/photo-1603415526960-f7e0328b2a19">
 </section>
@@ -84,86 +93,40 @@ footer{text-align:center;padding:25px;background:#000;color:#777}
 <h2>About Me</h2>
 <div class="about">
 <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296">
-<p>
-Mr. Johan is a seasoned entrepreneur and professional forex trader with over a decade of experience in financial markets. He began his journey in 2012, mastering forex trading strategies, market analysis, and risk management techniques. His expertise has enabled him to consistently generate profitable outcomes while minimizing risk exposure.
-
-Beyond forex, Mr. Johan has established successful traditional businesses in the gold and oil sectors, gaining deep insight into commodity markets, supply chains, and international trade. This diversified experience allows him to combine traditional business acumen with modern financial technologies.
-
-In 2025, he founded Ai Forex, an innovative platform designed to leverage AI in financial trading, aiming to create a decentralized, intelligent trading ecosystem. His vision extends to integrating multiple projects under the Ai Forex umbrella, including e-commerce, real estate, import-export, agent banking, online banking, and crypto debit solutions, reflecting his commitment to building a robust, future-ready financial ecosystem.
-
-Mr. Johan is committed to bringing premium, secure, and transparent financial solutions to clients globally, driven by innovation, discipline, and a long-term vision for growth.
-</p>
+<p>Mr. Johan is a forex trader since 2012 with experience in global markets, gold and oil business, and founder of Ai Forex platform.</p>
 </div>
 </section>
 
 <section id="expertise">
 <h2>Expertise</h2>
 <div class="grid">
-<div class="card"><img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3"><h3>Forex Trading</h3><p>Advanced strategies and market expertise.</p></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995"><h3>AI Finance</h3><p>Automation and smart trading systems.</p></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1559526324-593bc073d938"><h3>Risk Management</h3><p>Capital safety and consistency.</p></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"><h3>Global Business</h3><p>Gold, oil and financial operations.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3"><h3>Forex Trading</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995"><h3>AI Finance</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1559526324-593bc073d938"><h3>Risk Management</h3></div>
 </div>
 </section>
 
 <section>
 <h2>Experience</h2>
 <div class="exp-grid">
-<div class="exp-card">
-<img src="https://images.unsplash.com/photo-1549421263-04b5e1c8b3f4">
-<div class="exp-content">
-<span>2012 - Present</span>
-<h3>Forex Trading Journey</h3>
-<p>Started forex trading in 2012, mastering complex market strategies, risk mitigation, and achieving consistent profitability. Developed expertise in currency analysis, trend forecasting, and portfolio management.</p>
-</div>
-</div>
-<div class="exp-card">
-<img src="https://images.unsplash.com/photo-1581091870627-3a2c2b3b52c2">
-<div class="exp-content">
-<span>2015 - Present</span>
-<h3>Gold & Oil Business</h3>
-<p>Built a strong foundation in traditional businesses including gold trading and oil sector operations. Managed supply chains, commodity trading, and international partnerships with a focus on strategic growth and risk management.</p>
-</div>
-</div>
-<div class="exp-card">
-<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995">
-<div class="exp-content">
-<span>2025 - Present</span>
-<h3>Founder of Ai Forex</h3>
-<p>Launched Ai Forex, an AI-driven forex trading platform aiming to create a decentralized financial ecosystem. Oversaw platform development, AI integration, and expansion into e-commerce, real estate, agent banking, online banking, and crypto solutions.</p>
-</div>
-</div>
+<div class="exp-card"><img src="https://images.unsplash.com/photo-1549421263-04b5e1c8b3f4"><div class="exp-content"><span>2012</span><h3>Forex</h3></div></div>
+<div class="exp-card"><img src="https://images.unsplash.com/photo-1581091870627-3a2c2b3b52c2"><div class="exp-content"><span>2015</span><h3>Gold & Oil</h3></div></div>
 </div>
 </section>
 
-<section>
-<h2>Projects & Vision</h2>
-<div class="project-card">
-<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995">
-<div>
-<h3>Ai Forex Platform</h3>
-<p>Developing an AI-based trading system for global users.</p>
-</div>
-</div>
-</section>
-
-<section class="quote">
-“Success in financial markets comes from discipline, consistency, and innovation.”
-</section>
+<section class="quote">“Success comes from discipline.”</section>
 
 <section id="contact">
-<h2>Contact Me</h2>
+<h2>Contact</h2>
 <form>
-<input type="text" placeholder="Name">
-<input type="email" placeholder="Email">
+<input placeholder="Name">
+<input placeholder="Email">
 <textarea placeholder="Message"></textarea>
-<button>Send Message</button>
+<button>Send</button>
 </form>
 </section>
 
-<footer>
-© 2026 Mr. Johan
-</footer>
+<footer>© 2026 Mr. Johan</footer>
 
 </body>
 </html>
